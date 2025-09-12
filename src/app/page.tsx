@@ -20,27 +20,27 @@ export default function Home() {
           <CarouselContent>
             <CarouselItem className="flex h-64 items-center justify-center rounded-lg bg-blue-600 text-white text-2xl">
               <Image
-  src="/images/1dde525a0f896d799f37c092c39ef0d1.jpg"
-  alt="Ocean backg"
-  width={150}
-  height={150}
-/>
-            </CarouselItem>
-            <CarouselItem className="flex h-64 items-center justify-center rounded-lg bg-blue-500 text-white text-2xl">
-<Image
-  src="/images/1dde525a0f896d799f37c092c39ef0d1.jpg"
+                src="/images/morks.jpeg"
+                alt="Ocean backg"
+                width={150}
+                height={150}
+              />
+              </CarouselItem>
+              <CarouselItem className="flex h-64 items-center justify-center rounded-lg bg-blue-500 text-white text-2xl">
+              <Image
+  src="/images/bangaBait-Marlin.png"
   alt="Ocean background"
   width={150}
   height={150}
 />
             </CarouselItem>
             <CarouselItem className="flex h-64 items-center justify-center rounded-lg bg-blue-400 text-white text-2xl">
-<Image
-  src="/images/1dde525a0f896d799f37c092c39ef0d1.jpg"
-  alt="Ocean background"
-  width={150}
-  height={150}
-/>
+                <Image
+                  src="/images/1dde525a0f896d799f37c092c39ef0d1.jpg"
+                  alt="Ocean background"
+                  width={150}
+                  height={150}
+                />
             </CarouselItem>
           </CarouselContent>
 

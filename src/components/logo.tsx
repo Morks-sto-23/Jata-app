@@ -1,4 +1,5 @@
 import { cn } from '@/lib/utils'
+import Image from 'next/image'
 
 export const Logo = ({ className, uniColor }: { className?: string; uniColor?: boolean }) => {
     return (
@@ -82,3 +83,6 @@ export const LogoStroke = ({ className }: { className?: string }) => {
         </svg>
     )
 }
+export const JataBaitsLogo = () => (
+  <img src="/images/bangaBait-Marlin.png" alt="Jata Baits Logo" className="h-10 w-auto" />
+);

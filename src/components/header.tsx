@@ -5,6 +5,7 @@ import { Menu, X } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import React from 'react'
 import { cn } from '@/lib/utils'
+import { JataBaitsLogo } from './logo'
 
 const menuItems = [
     { name: 'Features', href: '#link' },
@@ -35,7 +36,7 @@ export const HeroHeader = () => {
                                 href="/"
                                 aria-label="home"
                                 className="flex items-center space-x-2">
-                                <Logo />
+                                <JataBaitsLogo />
                             </Link>
 
                             <button
