@@ -4,7 +4,7 @@ import Link from 'next/link'
 const links = [
     {
         title: 'Features',
-        href: '#',
+        href: 'https://lively-ground-0678d9d10.6.azurestaticapps.net/',
     },
 ]
 

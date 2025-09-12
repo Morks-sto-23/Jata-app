@@ -49,7 +49,7 @@ export default function HeroSection({ carouselRef }: HeroSectionProps) {
         <div className="container relative z-10 mx-auto flex max-w-5xl flex-col items-center px-6 text-center text-white">
           <AnimatedGroup variants={transitionVariants}>
             <TextEffect as="h1" className="mb-6 text-4xl font-extrabold sm:text-6xl lg:text-7xl">
-              Catch More. Fish Smarter.
+              Catch More. Fish More.
             </TextEffect>
 
             <p className="mb-8 max-w-2xl text-lg sm:text-xl text-blue-100">
@@ -67,15 +67,6 @@ export default function HeroSection({ carouselRef }: HeroSectionProps) {
                   Shop Lures
                   <ArrowRight className="ml-2 inline-block transition-transform group-hover:translate-x-1" />
                 </Link>
-              </Button>
-
-              <Button
-                size="lg"
-                variant="outline"
-                className="rounded-xl border-blue-400 text-white hover:bg-blue-700"
-                onClick={handleLearnMore}
-              >
-                Learn More
               </Button>
             </div>
           </AnimatedGroup>
