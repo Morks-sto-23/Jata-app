@@ -22,7 +22,7 @@ export default function Home() {
       <CarouselContent>
         <CarouselItem className="flex min-h-[400px] md:min-h-[500px] lg:min-h-[600px] items-center justify-center rounded-lg bg-blue-600 text-white">
           <Image
-            src="/images/morks.jpeg"
+            src="/images/makrel.jpeg"
             alt="Ocean background"
             width={600}
             height={400}
@@ -32,7 +32,7 @@ export default function Home() {
 
         <CarouselItem className="flex min-h-[400px] md:min-h-[500px] lg:min-h-[600px] items-center justify-center rounded-lg bg-blue-500 text-white">
           <Image
-            src="/images/bangaBait-Marlin.png"
+            src="/images/sunrise.jpeg"
             alt="Marlin jumping"
             width={600}
             height={400}
@@ -42,7 +42,7 @@ export default function Home() {
 
         <CarouselItem className="flex min-h-[400px] md:min-h-[500px] lg:min-h-[600px] items-center justify-center rounded-lg bg-blue-400 text-white">
           <Image
-            src="/images/1dde525a0f896d799f37c092c39ef0d1.jpg"
+            src="/images/beeSide.jpeg"
             alt="Ocean"
             width={600}
             height={400}

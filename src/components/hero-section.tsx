@@ -37,7 +37,7 @@ export default function HeroSection({ carouselRef }: HeroSectionProps) {
         {/* Background Image */}
         <div className="absolute inset-0 -z-10">
           <Image
-            src="/ocean-bg.jpg"
+            src="/images/bangaBait-Marlin.png"
             alt="Ocean background"
             fill
             priority
@@ -63,7 +63,7 @@ export default function HeroSection({ carouselRef }: HeroSectionProps) {
                 className="group rounded-xl bg-blue-600 px-8 py-6 text-lg font-semibold hover:bg-blue-500"
                 asChild
               >
-                <Link href="/shop">
+                <Link href="#carousel">
                   Shop Lures
                   <ArrowRight className="ml-2 inline-block transition-transform group-hover:translate-x-1" />
                 </Link>
