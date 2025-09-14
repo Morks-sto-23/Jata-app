@@ -33,27 +33,34 @@ export default function HeroSection({ carouselRef }: HeroSectionProps) {
   return (
     <>
       <HeroHeader />
-      <main className="relative flex min-h-[85vh] w-full items-center justify-center overflow-hidden bg-gradient-to-b from-blue-900 via-blue-800 to-blue-950">
+
+      <main className="relative flex min-h-[85vh] w-full items-center justify-center overflow-hidden">
         {/* Background Image */}
         <div className="absolute inset-0 -z-10">
           <Image
-            src="/images/bangaBait-Marlin.png"
+            src="/images/yellowBoat.jpeg"
             alt="Ocean background"
             fill
             priority
-            className="object-cover opacity-40"
+            className="object-cover"
           />
+          {/* Slight tint overlay for readability */}
+          <div className="absolute inset-0 bg-black/20"></div>
         </div>
 
         {/* Content */}
-        <div className="container relative z-10 mx-auto flex max-w-5xl flex-col items-center px-6 text-center text-white">
+        <div className="container relative z-10 mx-auto flex max-w-5xl flex-col items-center px-6 text-center">
           <AnimatedGroup variants={transitionVariants}>
-            <TextEffect as="h1" className="mb-6 text-4xl font-extrabold sm:text-6xl lg:text-7xl">
+            <TextEffect
+              as="h1"
+              className="mb-6 text-4xl font-extrabold sm:text-6xl lg:text-7xl text-white drop-shadow-lg"
+            >
               Catch More. Fish More.
             </TextEffect>
 
-            <p className="mb-8 max-w-2xl text-lg sm:text-xl text-blue-100">
-              Introducing <span className="font-semibold text-blue-300">Jata-Bait</span> — hand-crafted
+            <p className="mb-8 max-w-2xl text-lg sm:text-xl text-white drop-shadow-md">
+              Introducing{" "}
+              <span className="font-semibold text-blue">Jata-Bait</span> — hand-crafted
               lures designed to outsmart even the toughest game fish.
             </p>
 
