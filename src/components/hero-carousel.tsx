@@ -5,7 +5,6 @@ import useEmblaCarousel, { type UseEmblaCarouselType } from "embla-carousel-reac
 import Image from "next/image"
 import { ArrowLeft, ArrowRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import { cn } from "@/lib/utils"
 
 type CarouselApi = UseEmblaCarouselType[1]
 
@@ -40,12 +39,15 @@ export default function HeroCarousel() {
       <div ref={carouselRef} className="overflow-hidden">
         <div className="flex">
           {slides.map((slide, i) => (
-            <div key={i} className="relative min-w-full h-[500px] md:h-[600px] lg:h-[700px] flex-shrink-0">
+            <div
+              key={i}
+              className="relative min-w-full h-[60vh] sm:h-[70vh] md:h-[80vh] lg:h-[90vh] flex-shrink-0"
+            >
               <Image
                 src={slide.src}
                 alt={slide.alt}
                 fill
-                className="object-cover object-center"
+                className="object-contain sm:object-cover object-center"
                 priority
               />
             </div>
