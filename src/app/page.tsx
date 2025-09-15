@@ -7,6 +7,8 @@ import { useRef } from "react"
 import Image from 'next/image';
 import Testimonials from "@/components/testimonials"
 import AboutMeSection from "@/components/about-me"
+import PricingSection from "@/components/pricing"
+import FeaturesSection from "@/components/features"
 
 export default function Home() {
   const carouselRef = useRef<HTMLDivElement>(null)
@@ -16,7 +18,7 @@ export default function Home() {
       {/* Hero Section */}
       <HeroSection carouselRef={carouselRef} />
 
-            {/* About Me Section */}
+      {/* About Me Section */}
       <AboutMeSection />
 
       {/* Carousel Section */}
@@ -26,10 +28,15 @@ export default function Home() {
         </div>
       </section>
 
+        {/* PricingSection */}
+        <FeaturesSection/>
 
-      <section>
+        {/* PricingSection */}
+        <PricingSection/>
+
+
+        {/* Testimonials */}
         <Testimonials/>
-      </section>
 
       {/* Footer */}
       <FooterSection />
