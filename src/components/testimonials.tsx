@@ -1,78 +1,93 @@
-import { Card, CardContent, CardHeader } from '@/components/ui/card'
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
+"use client"
+
+import { Card, CardHeader, CardContent } from "@/components/ui/card"
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 
 export default function Testimonials() {
-    return (
-        <section className="py-16 md:py-32">
-            <div className="mx-auto max-w-6xl space-y-8 px-6 md:space-y-16">
-                <div className="relative z-10 mx-auto max-w-xl space-y-6 text-center md:space-y-12">
-                    <h2 className="text-4xl font-medium lg:text-5xl">Built by Fishermen for Fishermen</h2>
-                    <p>Hand Crafted Lures</p>
-                </div>
+  const testimonialData = [
+    {
+      quote: `“Jata-Bait lures consistently outfish everything else in my tackle box. 
+               The action is so lifelike — I’ve landed more trophy fish this season than ever before.”`,
+      name: "James Whitaker",
+      role: "Guinjata Ski Boat Club",
+      avatar: "https://randomuser.me/api/portraits/men/32.jpg",
+    },
+    {
+      quote: `“I was skeptical at first, but these lures just work. 
+               They hold up after dozens of casts and still look brand new. Absolute game-changer.”`,
+      name: "Maria Sanchez",
+      role: "Umdloti Beach Club",
+      avatar: "https://randomuser.me/api/portraits/women/45.jpg",
+    },
+    {
+      quote: `“The detail and finish on each lure is incredible. 
+               Even the pickiest fish can’t resist them.”`,
+      name: "Liam Foster",
+      role: "Salt Rock Sport Fish Club",
+      avatar: "https://randomuser.me/api/portraits/men/76.jpg",
+    },
+    {
+      quote: `“I’ve tried a lot of lures over the years, but Jata-Bait is in a league of its own. 
+               Perfect for both freshwater and saltwater.”`,
+      name: "Sophie Kim",
+      role: "Durban Sport Fishing Club",
+      avatar: "https://randomuser.me/api/portraits/women/68.jpg",
+    },
+    {
+      quote: `“Durable, realistic, and effective. 
+               Every fishing trip has been more successful since I switched to Jata-Bait.”`,
+      name: "Ethan Brown",
+      role: "Zinkwazi Ski & Boat Club",
+      avatar: "https://randomuser.me/api/portraits/men/14.jpg",
+    },
+    {
+      quote: `“These lures are a joy to use. 
+               Hand-crafted quality you can trust with every cast.”`,
+      name: "Olivia Martinez",
+      role: "Southbroom Boat Club",
+      avatar: "https://randomuser.me/api/portraits/women/22.jpg",
+    },
+  ]
 
-                <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-4 lg:grid-rows-2">
-                    <Card className="grid grid-rows-[auto_1fr] gap-8 sm:col-span-2 sm:p-6 lg:row-span-2">
-                        <CardHeader>
-                            <img
-                                className="h-6 w-fit dark:invert"
-                                src="https://html.tailus.io/blocks/customers/nike.svg"
-                                alt="Nike Logo"
-                                height="24"
-                                width="auto"
-                            />
-                        </CardHeader>
-                        <CardContent>
-                            <blockquote className="grid h-full grid-rows-[1fr_auto] gap-6">
-                                <p className="text-xl font-medium">Jata bait has transformed the way I Look at lures these days they are the best on the market </p>
+  return (
+    <section className="py-16 md:py-32">
+      <div className="mx-auto max-w-6xl space-y-8 px-6 md:space-y-16">
+        {/* Heading */}
+        <div className="relative z-10 mx-auto max-w-xl space-y-6 text-center md:space-y-12">
+          <h2 className="text-4xl font-medium lg:text-5xl">Built by Fishermen for Fishermen</h2>
+          <p className="text-lg text-muted-foreground">Real stories from anglers across top ski & sport fishing clubs</p>
+        </div>
 
-                                <div className="grid grid-cols-[auto_1fr] items-center gap-3">
-                                    <Avatar className="size-12">
-                                        <AvatarImage
-                                            src="https://tailus.io/images/reviews/shekinah.webp"
-                                            alt="Shekinah Tshiokufila"
-                                            height="400"
-                                            width="400"
-                                            loading="lazy"
-                                        />
-                                        <AvatarFallback>ST</AvatarFallback>
-                                    </Avatar>
+        {/* Testimonials grid */}
+        <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+          {testimonialData.map((t, i) => (
+            <Card key={i} className="p-6">
+              <CardContent className="h-full pt-6">
+                <blockquote className="grid h-full grid-rows-[1fr_auto] gap-6">
+                  <p className="text-lg font-medium">{t.quote}</p>
 
-                                    <div>
-                                        <cite className="text-sm font-medium">Donald Trump</cite>
-                                        <span className="text-muted-foreground block text-sm">Software Ingineer</span>
-                                    </div>
-                                </div>
-                            </blockquote>
-                        </CardContent>
-                    </Card>
-                    <Card className="md:col-span-2">
-                        <CardContent className="h-full pt-6">
-                            <blockquote className="grid h-full grid-rows-[1fr_auto] gap-6">
-                                <p className="text-xl font-medium">Jata bait, A real gold mine.</p>
-
-                                <div className="grid grid-cols-[auto_1fr] items-center gap-3">
-                                    <Avatar className="size-12">
-                                        <AvatarImage
-                                            src="https://tailus.io/images/reviews/jonathan.webp"
-                                            alt="Jonathan Yombo"
-                                            height="400"
-                                            width="400"
-                                            loading="lazy"
-                                        />
-                                        <AvatarFallback>JY</AvatarFallback>
-                                    </Avatar>
-                                    <div>
-                                        <cite className="text-sm font-medium">Jacob Zuma</cite> 
-                                        <span className="text-muted-foreground block text-sm">Aids Ingineer</span>
-                                    </div>
-                                </div>
-                            </blockquote>
-                        </CardContent>
-                    </Card>
-
-
-                </div>
-            </div>
-        </section>
-    )
+                  <div className="grid grid-cols-[auto_1fr] items-center gap-3">
+                    <Avatar className="size-12">
+                      <AvatarImage
+                        src={t.avatar}
+                        alt={t.name}
+                        height="400"
+                        width="400"
+                        loading="lazy"
+                      />
+                      <AvatarFallback>{t.name.split(" ").map(n => n[0]).join("")}</AvatarFallback>
+                    </Avatar>
+                    <div>
+                      <cite className="text-sm font-medium">{t.name}</cite>
+                      <span className="text-muted-foreground block text-sm">{t.role}</span>
+                    </div>
+                  </div>
+                </blockquote>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+      </div>
+    </section>
+  )
 }

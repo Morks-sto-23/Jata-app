@@ -4,41 +4,47 @@ import HeroSection from "@/components/hero-section"
 import FooterSection from "@/components/footer"
 import HeroCarousel from "@/components/hero-carousel"
 import { useRef } from "react"
-import Image from 'next/image';
 import Testimonials from "@/components/testimonials"
 import AboutMeSection from "@/components/about-me"
 import PricingSection from "@/components/pricing"
 import FeaturesSection from "@/components/features"
+import ContactSection from "@/components/contactMe"
+import { Contact } from "lucide-react"
 
 export default function Home() {
   const carouselRef = useRef<HTMLDivElement>(null)
 
   return (
     <div className="relative">
-      {/* Hero Section */}
+
       <HeroSection carouselRef={carouselRef} />
 
-      {/* About Me Section */}
-      <AboutMeSection />
+      <main className="space-y-24 px-6">
+        <section id="about">
+          <AboutMeSection />
+        </section>
 
-      {/* Carousel Section */}
-      <section id="carousel" className="mt-24 px-6">
-        <div className="mx-auto max-w-6xl">
+        <section id="carousel" className="mx-auto max-w-6xl">
           <HeroCarousel />
-        </div>
-      </section>
+        </section>
 
-        {/* PricingSection */}
-        <FeaturesSection/>
+        <section id="features">
+          <FeaturesSection />
+        </section>
 
-        {/* PricingSection */}
-        <PricingSection/>
+        <section id="pricing">
+          <PricingSection />
+        </section>
 
+        <section id="contact">
+          <ContactSection />
+        </section>
 
-        {/* Testimonials */}
-        <Testimonials/>
+        <section id="testimonials">
+          <Testimonials />
+        </section>
+      </main>
 
-      {/* Footer */}
       <FooterSection />
     </div>
   )

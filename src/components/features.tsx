@@ -1,6 +1,5 @@
 "use client"
 
-import { motion } from "framer-motion"
 import { Fish, Waves, Star, ShieldCheck, Zap, Heart } from "lucide-react"
 
 const features = [
@@ -43,16 +42,9 @@ export default function FeaturesSection() {
       className="relative w-full py-20 bg-white dark:bg-gray-950 transition-colors"
     >
       <div className="max-w-6xl mx-auto px-6 text-center">
-        <motion.h2
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="text-4xl sm:text-5xl font-extrabold mb-6 
-                     text-gray-900 dark:text-white"
-        >
+        <h2 className="text-4xl sm:text-5xl font-extrabold mb-6 text-gray-900 dark:text-white">
           Features
-        </motion.h2>
+        </h2>
 
         <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto mb-12">
           Why anglers choose <span className="font-bold">Jata-Bait</span> lures — built for performance, durability, and success on every cast.
@@ -60,23 +52,18 @@ export default function FeaturesSection() {
 
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
           {features.map((feature, i) => (
-            <motion.div
+            <div
               key={i}
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: i * 0.1, duration: 0.6 }}
-              viewport={{ once: true }}
-              className="p-6 rounded-2xl shadow-md border 
-                         border-gray-200 dark:border-gray-800 
-                         bg-white dark:bg-gray-900 
-                         hover:shadow-xl transition"
+              className="p-6 rounded-2xl shadow-md border border-gray-200 dark:border-gray-800 
+                         bg-white dark:bg-gray-900 hover:shadow-xl hover:scale-[1.02] 
+                         transition-transform duration-300"
             >
               <div className="flex justify-center mb-4">{feature.icon}</div>
               <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white">
                 {feature.title}
               </h3>
               <p className="text-gray-600 dark:text-gray-400">{feature.description}</p>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>

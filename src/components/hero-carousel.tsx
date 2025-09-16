@@ -18,6 +18,7 @@ export default function HeroCarousel() {
   const [carouselRef, api] = useEmblaCarousel({ loop: true })
   const [canScrollPrev, setCanScrollPrev] = React.useState(false)
   const [canScrollNext, setCanScrollNext] = React.useState(false)
+  const [selectedIndex, setSelectedIndex] = React.useState(0)
 
   const scrollPrev = () => api?.scrollPrev()
   const scrollNext = () => api?.scrollNext()
@@ -26,6 +27,7 @@ export default function HeroCarousel() {
     if (!api) return
     setCanScrollPrev(api.canScrollPrev())
     setCanScrollNext(api.canScrollNext())
+    setSelectedIndex(api.selectedScrollSnap()) // track current slide
   }, [])
 
   React.useEffect(() => {
@@ -47,7 +49,7 @@ export default function HeroCarousel() {
                 src={slide.src}
                 alt={slide.alt}
                 fill
-                className="object-contain sm:object-cover object-center"
+                className="object-contain sm:object-cover object-center transition-opacity duration-700 ease-in-out"
                 priority
               />
             </div>
@@ -57,20 +59,36 @@ export default function HeroCarousel() {
 
       {/* Controls */}
       <Button
-        className="absolute top-1/2 left-4 -translate-y-1/2 rounded-full bg-white/70 hover:bg-white"
+        className="absolute top-1/2 left-4 -translate-y-1/2 rounded-full bg-white/80 hover:bg-white shadow-lg p-3"
         onClick={scrollPrev}
         disabled={!canScrollPrev}
+        aria-label="Previous slide"
       >
-        <ArrowLeft />
+        <ArrowLeft className="h-6 w-6" />
       </Button>
 
       <Button
-        className="absolute top-1/2 right-4 -translate-y-1/2 rounded-full bg-white/70 hover:bg-white"
+        className="absolute top-1/2 right-4 -translate-y-1/2 rounded-full bg-white/80 hover:bg-white shadow-lg p-3"
         onClick={scrollNext}
         disabled={!canScrollNext}
+        aria-label="Next slide"
       >
-        <ArrowRight />
+        <ArrowRight className="h-6 w-6" />
       </Button>
+
+      {/* Indicators */}
+      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-3">
+        {slides.map((_, i) => (
+          <button
+            key={i}
+            onClick={() => api?.scrollTo(i)}
+            className={`h-3 w-3 rounded-full transition-all ${
+              i === selectedIndex ? "bg-white scale-125" : "bg-white/50 hover:bg-white/80"
+            }`}
+            aria-label={`Go to slide ${i + 1}`}
+          />
+        ))}
+      </div>
     </div>
   )
 }
