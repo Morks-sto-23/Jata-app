@@ -35,7 +35,6 @@ export default function HeroSection({ carouselRef }: HeroSectionProps) {
       <HeroHeader />
 
       <main className="relative flex min-h-[85vh] w-full items-center justify-center overflow-hidden">
-        {/* Background Image */}
         <div className="absolute inset-0 -z-10">
           <Image
             src="/images/yellowBoat.jpeg"
@@ -44,24 +43,20 @@ export default function HeroSection({ carouselRef }: HeroSectionProps) {
             priority
             className="object-cover"
           />
-          {/* Slight tint overlay for readability */}
           <div className="absolute inset-0 bg-black/20"></div>
         </div>
 
-        {/* Content */}
         <div className="container relative z-10 mx-auto flex max-w-5xl flex-col items-center px-6 text-center">
           <AnimatedGroup variants={transitionVariants}>
             <TextEffect
               as="h1"
               className="mb-6 text-4xl font-extrabold sm:text-6xl lg:text-7xl text-white drop-shadow-lg"
             >
-              Catch More. Fish More.
+              Hand-Crafted Lures Built for Trophy Fish
             </TextEffect>
 
             <p className="mb-8 max-w-2xl text-lg sm:text-xl text-white drop-shadow-md">
-              Introducing{" "}
-              <span className="font-semibold text-blue">Jata-Bait</span> — hand-crafted
-              lures designed to outsmart even the toughest game fish.
+              Every <span className="font-semibold text-blue">Jata-Bait</span> lure is meticulously designed and tested by expert anglers. Outfish the competition, enjoy flawless action, and land your dream catch every time.
             </p>
 
             <div className="flex flex-col gap-4 sm:flex-row">
