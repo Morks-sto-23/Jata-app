@@ -26,10 +26,10 @@ export default function ContactSection() {
 
           <div className="space-y-3">
             <p className="flex items-center gap-2 text-foreground">
-              <Phone className="w-5 h-5 text-primary" /> +27 123 456 7890
+              <Phone className="w-5 h-5 text-primary" /> +27 76 148 5809
             </p>
             <p className="flex items-center gap-2 text-foreground">
-              <Mail className="w-5 h-5 text-destructive" /> hello@example.com
+              <Mail className="w-5 h-5 text-destructive" /> kelvin.stokes@gmail.com
             </p>
           </div>
 

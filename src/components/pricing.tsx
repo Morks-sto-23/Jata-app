@@ -40,6 +40,16 @@ const plans = [
 ]
 
 export default function PricingSection() {
+  const scrollToContact = () => {
+    const contactSection = document.querySelector("#contact")
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: "smooth", block: "start" })
+    } else {
+      // fallback: scroll to bottom if element not found
+      window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" })
+    }
+  }
+
   return (
     <section id="pricing" className="relative w-full py-20 bg-gradient-to-b from-black/5 to-black/10">
       <div className="max-w-6xl mx-auto px-6 text-center">
@@ -77,13 +87,14 @@ export default function PricingSection() {
                   ))}
                 </ul>
                 <Button
+                  onClick={scrollToContact}
                   className={`w-full mt-auto ${
                     plan.highlighted
                       ? "bg-blue-600 hover:bg-blue-700 text-white"
                       : "bg-gray-200 hover:bg-gray-300"
                   }`}
                 >
-                  {plan.highlighted ? "Shop 3-Pack" : "Shop Now"}
+                  {plan.highlighted ? "Contact for 3-Pack" : "Contact Me"}
                 </Button>
               </CardContent>
             </Card>
