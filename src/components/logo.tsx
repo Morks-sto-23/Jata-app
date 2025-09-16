@@ -84,5 +84,5 @@ export const LogoStroke = ({ className }: { className?: string }) => {
     )
 }
 export const JataBaitsLogo = () => (
-  <img src="/images/shamwari.jpeg" alt="Jata Baits Logo" className="h-10 w-auto" />
+  <img src="/images/logo.png" alt="Jata Baits Logo" className="h-10 w-auto" />
 );
