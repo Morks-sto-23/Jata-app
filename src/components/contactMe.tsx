@@ -10,7 +10,7 @@ export default function ContactSection() {
       <div className="max-w-6xl mx-auto px-6 text-center md:text-left flex flex-col md:flex-row items-center md:items-start gap-10">
         <div className="flex-shrink-0">
           <Image
-            src="/images/beeSide.jpeg"
+            src="/images/shamwari.jpeg"
             alt="Picture of me"
             width={250}
             height={250}
