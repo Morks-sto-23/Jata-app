@@ -8,7 +8,7 @@ export default function Testimonials() {
     {
       quote: `“Jata-Bait lures consistently outfish everything else in my tackle box. 
                The action is so lifelike — I’ve landed more trophy fish this season than ever before.”`,
-      name: "James Whitaker",
+      name: "James Smith",
       role: "Guinjata Ski Boat Club",
       avatar: "https://randomuser.me/api/portraits/men/32.jpg",
     },
@@ -29,7 +29,7 @@ export default function Testimonials() {
     {
       quote: `“I’ve tried a lot of lures over the years, but Jata-Bait is in a league of its own. 
                Perfect for both freshwater and saltwater.”`,
-      name: "Sophie Kim",
+      name: "Sophie van der Merwe",
       role: "Durban Sport Fishing Club",
       avatar: "https://randomuser.me/api/portraits/women/68.jpg",
     },
@@ -43,7 +43,7 @@ export default function Testimonials() {
     {
       quote: `“These lures are a joy to use. 
                Hand-crafted quality you can trust with every cast.”`,
-      name: "Olivia Martinez",
+      name: "Olivia Johnson",
       role: "Southbroom Boat Club",
       avatar: "https://randomuser.me/api/portraits/women/22.jpg",
     },
